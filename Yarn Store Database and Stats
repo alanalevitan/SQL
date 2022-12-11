@@ -1,0 +1,33 @@
+--Create a Yarn Store Database
+
+CREATE TABLE Yarn_Store (id INTEGER PRIMARY KEY, Brand TEXT, Yarn_Weight TEXT, Price INTEGER, Quantity INTEGER);
+
+INSERT INTO Yarn_Store VALUES(1,"Berroco Comfort Sock","Sport",8,30);
+INSERT INTO Yarn_Store Values(2,"Malabrigo Rios","Worsted",23,120);
+INSERT INTO Yarn_Store Values(3,"Plymouth Calico","DK",7.49,60);
+INSERT INTO Yarn_Store Values(4,"Sirdar Alpine","Super Bulky",6.25,70);
+INSERT INTO Yarn_Store Values(5,"Universal Alpaculence","Fingering",10,50);
+INSERT INTO Yarn_Store Values(6,"Amano Sami","Sport",9,30);
+INSERT INTO Yarn_Store Values(7,"Apple Fiber Studio Opal","Worsted",31,45);
+INSERT INTO Yarn_Store Values(8,"Bella Yarn","DK",34,5);
+INSERT INTO Yarn_Store Values(9,"Noro Bachi","Bulky",45,20);
+INSERT INTO Yarn_Store Values(10,"Plucky Knitter","Lace",31,15);
+INSERT INTO Yarn_Store Values(11,"Lang Yarns Clouds","Bulky",29,100);
+INSERT INTO Yarn_Store Values(12,"Schoppel Zauberball Crazy","Fingering",25,65);
+INSERT INTO Yarn_Store Values(13,"The Fibre Co. Cirro","Sport",16,85);
+INSERT INTO Yarn_Store Values(14,"Urth Yarns Uneek","Fingering",27,25);
+INSERT INTO Yarn_Store Values(15,"Circulo Angora","Bulky",14.50,7);
+
+SELECT * FROM Yarn_Store;
+
+--Display the database ordered by price
+
+SELECT * FROM Yarn_Store GROUP BY Price;
+
+--How much yarn does the store have?
+
+SELECT SUM(Quantity) FROM Yarn_Store;
+
+--How much yarn is in each yarn weight?
+
+SELECT Yarn_weight, SUM(quantity) FROM Yarn_Store GROUP BY Yarn_Weight;
