@@ -18,6 +18,8 @@ INSERT INTO Yarn_Store Values(13,"The Fibre Co. Cirro","Sport",16,85);
 INSERT INTO Yarn_Store Values(14,"Urth Yarns Uneek","Fingering",27,25);
 INSERT INTO Yarn_Store Values(15,"Circulo Angora","Bulky",14.50,7);
 
+--Display the database
+
 SELECT * FROM Yarn_Store;
 
 --Display the database ordered by price
